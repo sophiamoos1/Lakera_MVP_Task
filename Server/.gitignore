@@ -1,0 +1,14 @@
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# local koalaAI model
+local_model/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
