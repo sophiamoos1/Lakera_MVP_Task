@@ -90,5 +90,14 @@ A basic MVP isn't enough for real-world usage. Production completness includes i
 ### Dokumentation 
 - Update README
 - Create an Maintenance plan
-
 ___
+
+## Assumptions and Trade-offs
+For the latency and load testing feature, I decided to use a predefined set of base phrases rather than live user input. The idea was to simulate a realistic variety of content - including neutral, positive, and toxic examples - while keeping things simple and controlled.
+
+This trade-off allowed me to:
+- stay within the limited time frame of the MVP task,
+- run reproducible tests under consistent conditions,
+- and still gather meaningful latency data for the backend.
+  
+The test sends real HTTP requests (e.g. 100 or more) to the /moderate endpoint and measures the response time of each request. It then calculates key metrics like minimum, maximum, average, and total latency. While it doesn’t use real production traffic, I believe this approach is a solid compromise for an MVP and fully meets the goal of validating API performance under load.
