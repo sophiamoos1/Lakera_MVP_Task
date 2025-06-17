@@ -39,8 +39,12 @@ export default function LatencyTest(props: Props) {
     }, [loading])
 
     const getRandomPhrases = (count: number): string[] =>  {
-        const shuffledPhrases = [...basePhrases].sort(() => 0.5 - Math.random());
-        return shuffledPhrases.slice(0, count);
+        const generated: string[] = [];
+        for (let i = 0; i < count; i++) {
+            const randomIndex = Math.floor(Math.random() * basePhrases.length);
+            generated.push(basePhrases[randomIndex]);
+        }
+        return generated;
     }
 
     const handleGeneratePhrase = () => {
