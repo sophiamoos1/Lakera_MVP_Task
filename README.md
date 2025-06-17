@@ -8,7 +8,7 @@ Follow these steps to run the MVP on your local machine:
 
 1. **Clone the repository**  
 ```bash
-git clone <repository-url>
+git clone git@github.com:sophiamoos1/Lakera_MVP_Task.git
 ```
 
 2. **Navigate to the server/backend directory**
